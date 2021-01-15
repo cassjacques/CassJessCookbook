@@ -1,0 +1,20 @@
+{
+  "name": "jessandcassquarantinecookbook",
+  "version": "1.0.0",
+  "description": "Cass and Jess’ foodSaver Recipe App User Story",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.generalassemb.ly/cjacques/JessAndCassQuarantineCookbook.git"
+  },
+  "author": "Jess & Cass",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1"
+  }
+}
