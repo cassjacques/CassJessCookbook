@@ -1,4 +1,4 @@
-Cass and Jess’ foodSaver Recipe App User Story
+Cass and Jess’ Quarantine Cookbook 
 
 ## Scope:
 
@@ -30,8 +30,6 @@ Users can select a sorting type.
 Users can see all available recipes page. 
 Users can select individual recipes. 
 
-
-
 Sprint 3 -
 Users can see individual recipes.
 Within the recipe page:
@@ -45,6 +43,11 @@ Stretch goal: sort recipes by type && difficulty.
 
 ## Wireframe/ERD:
 
+![image_2021-01-15_12-55-55](https://media.git.generalassemb.ly/user/32534/files/705e2280-5736-11eb-888f-64b578accce1)
+
+## Database Models:
+
+![image_2021-01-15_12-55-55](https://media.git.generalassemb.ly/user/32534/files/743e7480-5737-11eb-97f9-4f81c3b492d5)
 
 ## Technologies Used:
 
@@ -55,7 +58,3 @@ Express
 EJS
 MongoDB
 Mongoose
-
-##Database Models:
-
-
