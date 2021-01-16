@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const usersController = require('./controllers/userController');
+const userController = require('./controllers/userController');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -21,7 +21,7 @@ app.get('/', (req, res) => {
     res.render('index', context);
 });
 
-app.use('/', usersController);
+app.use('/', userController);
 
 
 

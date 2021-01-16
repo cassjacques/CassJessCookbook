@@ -5,9 +5,6 @@ const recipeSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    recipeType: {
-        type: String,
-    },
         ingredients: {
             type: [{body: String,}],
             required: true,
@@ -16,6 +13,9 @@ const recipeSchema = new mongoose.Schema({
         Type: String,
         required: true,
     },
+    recipeType: {
+        type: String,
+    }
 });
 
 const Recipe = mongoose.model('Recipe', recipeSchema);
