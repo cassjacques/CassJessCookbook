@@ -7,15 +7,15 @@ router.get('/newUser', (req, res) => {
 });
 
 
-
-
-
-
-
-router.get('/login', (req, res) => {
-    res.render('users/login');
+router.post('/', (req, res) => {
+    console.log(req);
+    db.User.create(req.body, (err, newUser) => {
+        if (err) {
+            console.log(err);
+        }
+        res.redirect('/users/login');
+    });
 });
 
-router.post('login', (req, res) => {
-    console.log('Login Route');
-});
+
+module.exports = router;
