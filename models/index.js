@@ -22,8 +22,8 @@ mongoose.connection.on('error', (err) => {
   console.log(err);
 });
 
-// Make all models available after DB connection
+
 module.exports = {
   User: require('./User'),
-  Recipe: require('./Recipe'),
+ 
 };
