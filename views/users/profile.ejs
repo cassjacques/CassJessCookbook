@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+</head>
+<body>
+    
+    <main>
+        <h1>Welcom <%= user.name %></h1>
+
+        <a href="/users<%= user._id %>/recipes/new">
+        <h4>Add New Recipe</h4>
+    </a>
+
+    <h4>Recipes:</h4>
+    <ul>
+
+        <% user.recipes.forEach((recipe) => { %>
+        
+            <li>
+                <%= recipe.title %>
+                <%= recipe.ingredients %><button>View</button>
+            </li>
+        <% }); %>
+    </ul>
+    </main>
+</body>
+</html>
