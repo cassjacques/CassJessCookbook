@@ -47,7 +47,26 @@ router.post('/login', (req, res) => {
     });
 });
 
+router.get('/:id', (req, res) => {
+    console.log(`User id=${req.params.id}`);
 
+    db.User.findById(req.params.id)
+    .populate('recipes')
+    .exec((err, foundUser) => {
+        if (err) {
+            console.log(err);
+        };
+        
+        const context = {
+            user: foundUser,
+            tempRecipes: [
+                {title: 'Recipe One'},
+                {title: 'Recipe Two'},
+            ]
+        };
+        res.render('/users/profile', context);
+    });
+});
 
 
 module.exports = router;
