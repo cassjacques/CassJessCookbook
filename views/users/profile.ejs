@@ -8,9 +8,9 @@
 <body>
     
     <main>
-        <h1>Welcome <%= user.name %></h1>
+        <h1>Welcome <%= user.userName %></h1>
 
-        <a href="/users<%= user._id %>/recipes/new">
+        <a href="/users/<%= user._id %>/recipes/new">
         <h4>Add New Recipe</h4>
     </a>
 

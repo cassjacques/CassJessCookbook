@@ -2,19 +2,9 @@ const express = require('express');
 const router = express.Router();
 const db = require('../models')
 
-router.get('/', (req, res) => {
-    const context = {
-        meta: {
-            title: 'Welcome to Jess and Cass Quarantine Cookbook!',
-        },
-    };
-    res.render('index', context);
-});
-
 router.get('/newUser', (req, res) => {
     res.render('users/newUser');
 });
-
 
 router.post('/', (req, res) => {
     console.log(req);
@@ -31,42 +21,47 @@ router.get('/login', (req, res) => {
 });
 
 router.post('/login', (req, res) => {
-    db.User.findOne({ email: req.body.email }, (err, foundUser) => {
-        if (err) {
-            console.log(err);
-        };
-
-        if (!foundUser) {
-            return res.render('users/login');
-        };
-
-        if (foundUser.password === req.body.password) {
-            return res.redirect(`/users/${foundUser._id}`);
-        };
-        res.render('users/login');
+    console.log('================');
+    console.log('Login Route');
+  
+    console.log(req.body);
+    // Find the user by email
+    db.User.findOne({email: req.body.email}, (err, foundUser) => {
+      if (err) {
+        console.log(err);
+      }
+  
+      if (!foundUser) {
+        return res.render('users/login');
+      }
+  
+      // Verify the submitted password matches the foundUser.password
+      if (foundUser.password === req.body.password) {
+        return res.redirect(`/users/${foundUser._id}`);
+      }
+  
+      res.render('users/login');
     });
-});
+  });
 
 router.get('/:id', (req, res) => {
     console.log(`User id=${req.params.id}`);
 
     db.User.findById(req.params.id)
-    .populate('recipes')
-    .exec((err, foundUser) => {
-        if (err) {
-            console.log(err);
-        };
-        
-        const context = {
-            user: foundUser,
-            tempRecipes: [
-                {title: 'Recipe One'},
-                {title: 'Recipe Two'},
-            ]
-        };
-        res.render('/users/profile', context);
-    });
+        .populate('recipes')
+        .exec((err, foundUser) => {
+            if (err) {
+                console.log(err);
+            };
+
+            const context = {
+                user: foundUser
+            };
+            res.render('users/profile', context);
+        });
 });
+
+
 
 
 module.exports = router;
