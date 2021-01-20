@@ -61,8 +61,7 @@ router.delete('/:id', (req, res) => {
             console.log(err);
             return res.send(err);
         };
-
-        const userId = req.params.id;
+        
         db.User.findByIdAndUpdate(
             deletedRecipe.user,
             { $pull: { recipes: deletedRecipe._id } },
@@ -71,7 +70,8 @@ router.delete('/:id', (req, res) => {
                 console.log('updatedUser:', updatedUser);
             },
         )
-
+        const userId = deletedRecipe.user;
+        
         res.redirect(`/users/${userId}`);
     });
 });
