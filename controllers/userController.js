@@ -48,7 +48,7 @@ router.get('/:id', (req, res) => {
             if (err) {
                 console.log(err);
             };
-            console.log('look here:', foundUser);
+           
 
             const context = {
                 user: foundUser

@@ -23,7 +23,6 @@ router.get('/:id', (req, res) => {
     });
 });
 
-// GET (EDIT) an recipe by ID with form 
 router.get('/:id/edit', (req, res) => {
     db.Recipe.findById(req.params.id, (err, foundRecipe) => {
         if (err) {
@@ -33,7 +32,7 @@ router.get('/:id/edit', (req, res) => {
         const context = {
             recipeData: foundRecipe,
         };
-        res.render('recipes/editRecipe')
+        res.render('recipes/editRecipe', context)
     });
 });
 
@@ -48,16 +47,10 @@ router.put('/:id', (req, res) => {
                 console.log(err);
                 return res.send(err);
             }
-            res.redirect('/recipes')
+            res.redirect('/recipes/:id');
         }
     )
-})
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> dce818c3fcbd0cf46412495a5635e0571552575a
+});
 
 
 module.exports = router;
