@@ -7,7 +7,7 @@ router.get('/newUser', (req, res) => {
 });
 
 router.post('/', (req, res) => {
-    console.log(req);
+    // console.log(req);
     db.User.create(req.body, (err, newUser) => {
         if (err) {
             console.log(err);
@@ -21,7 +21,7 @@ router.get('/login', (req, res) => {
 });
 
 router.post('/login', (req, res) => {
-    console.log(req.body);
+    // console.log(req.body);
     db.User.findOne({ email: req.body.email }, (err, foundUser) => {
         if (err) {
             console.log(err);
@@ -40,7 +40,7 @@ router.post('/login', (req, res) => {
 });
 
 router.get('/:id', (req, res) => {
-    console.log(`User id=${req.params.id}`);
+    // console.log(`User id=${req.params.id}`);
 
     db.User.findById(req.params.id)
         .populate('recipes')
