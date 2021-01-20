@@ -48,6 +48,7 @@ router.get('/:id', (req, res) => {
             if (err) {
                 console.log(err);
             };
+            console.log('look here:', foundUser);
 
             const context = {
                 user: foundUser
@@ -62,32 +63,6 @@ router.get('/:id/recipes/new', (req, res) => {
     }
 
     res.render('users/newRecipe', context);
-});
-
-
-router.post('/:userId/recipes', (req, res) => {
-    db.Recipe.create(req.body, (err, newRecipe) => {
-        if (err) {
-            console.log(err);
-        }
-
-        db.User.findById(req.params.userId, (err, foundUser) => {
-            if (err) {
-                console.log(err);
-            }
-
-            foundUser.recipes.push(newRecipe
-            );
-
-            foundUser.save((err, savedUser) => {
-                if (err) {
-                    console.log(err);
-                }
-
-                res.redirect(`/users/${savedUser._id}`);
-            });
-        });
-    });
 });
 
 module.exports = router;

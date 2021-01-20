@@ -21,7 +21,7 @@
             <% user.recipes.forEach((recipe) => { %>
             <li>
                 <%= recipe.recipeTitle %>
-                <a href="<%= recipe._id %>" target="_blank"><button>View</button></a>
+                <a href="/recipes/<%= recipe._id %>" target="_blank"><button>View</button></a>
             </li>
             <% }); %>
         </ul>
