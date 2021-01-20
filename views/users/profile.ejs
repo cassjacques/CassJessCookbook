@@ -11,7 +11,7 @@
 
     <main>
 
-        <h1>Welcome <% user.name %></h1>
+        <h1>Welcome <%= user.userName %></h1>
         <a href="/users/<%= user._id %>/recipes/new">
             <h4>Add New Recipe</h4>
         </a>
@@ -20,8 +20,8 @@
         <ul>
             <% user.recipes.forEach((recipe) => { %>
             <li>
-                <%= recipe.title %>
-                <a href="<%= recipe.url %>" target="_blank"><button>View</button></a>
+                <%= recipe.recipeTitle %>
+                <a href="<%= recipe._id %>" target="_blank"><button>View</button></a>
             </li>
             <% }); %>
         </ul>
