@@ -7,13 +7,7 @@ const PORT = process.env.PORT || 4600;
 
 app.set('view engine', 'ejs');
 
-
-app.use('/recipes', recipeController);
-app.use('/users', userController);
-
 app.use(bodyParser.urlencoded({extended: false}));
-
-
 
 
 app.get('/', (req, res) => {
@@ -26,10 +20,8 @@ app.get('/', (req, res) => {
     res.render('index', context);
 });
 
-
-
-
-
+app.use('/recipes', recipeController);
+app.use('/users', userController);
 
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
