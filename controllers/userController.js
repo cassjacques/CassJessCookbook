@@ -22,22 +22,22 @@ router.get('/login', (req, res) => {
 
 router.post('/login', (req, res) => {
     console.log(req.body);
-    db.User.findOne({email: req.body.email}, (err, foundUser) => {
-      if (err) {
-        console.log(err);
-      }
-  
-      if (!foundUser) {
-        return res.render('users/login');
-      }
-  
-      if (foundUser.password === req.body.password) {
-        return res.redirect(`/users/${foundUser._id}`);
-      }
-  
-      res.render('users/login');
+    db.User.findOne({ email: req.body.email }, (err, foundUser) => {
+        if (err) {
+            console.log(err);
+        }
+
+        if (!foundUser) {
+            return res.render('users/login');
+        }
+
+        if (foundUser.password === req.body.password) {
+            return res.redirect(`/users/${foundUser._id}`);
+        }
+
+        res.render('users/login');
     });
-  });
+});
 
 router.get('/:id', (req, res) => {
     console.log(`User id=${req.params.id}`);
@@ -56,7 +56,38 @@ router.get('/:id', (req, res) => {
         });
 });
 
+router.get('/:id/recipes/new', (req, res) => {
+    const context = {
+        userId: req.params.id
+    }
+
+    res.render('users/newRecipe', context);
+});
 
 
+router.post('/:userId/recipes', (req, res) => {
+    db.Recipe.create(req.body, (err, newRecipe) => {
+        if (err) {
+            console.log(err);
+        }
+
+        db.User.findById(req.params.userId, (err, foundUser) => {
+            if (err) {
+                console.log(err);
+            }
+
+            foundUser.recipes.push(newRecipe
+            );
+
+            foundUser.save((err, savedUser) => {
+                if (err) {
+                    console.log(err);
+                }
+
+                res.redirect(`/users/${savedUser._id}`);
+            });
+        });
+    });
+});
 
 module.exports = router;

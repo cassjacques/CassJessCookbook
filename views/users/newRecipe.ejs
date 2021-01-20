@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Recipe</title>
+</head>
+<body>
+    
+    <main>
+
+        <h1>Add New Recipe</h1>
+
+        <form action='/users/<%= userId %>/recipes' method='POST'>
+
+            <div>
+                <label for='recipeTitle'>Title</label>
+                <input type='text' id='recipeTitle' name='recipeTitle' required>
+            </div>
+
+            <div>
+                <label for='ingredients'>Ingredients</label>
+                <input type='text' id='ingredients' name='ingredients' required>
+            </div>
+
+            <div>
+                <label for='instructions'>Instructions</label>
+                <input type='text' id='instructions' name='instructions'>
+            </div>
+        
+            <div>
+                <label for='type'>Type</label>
+                <input type='text' id='type' name='type'>
+            </div>
+
+            <button type='submit'>Add Recipe</button>
+
+        </form>
+
+    </main>
+</body>
+</html>

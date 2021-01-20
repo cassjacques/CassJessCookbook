@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const userController = require('./controllers/userController');
 const app = express();
-const PORT = process.env.PORT || 4500;
+const PORT = process.env.PORT || 4600;
 
 app.set('view engine', 'ejs');
 
