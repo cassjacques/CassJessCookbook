@@ -21,11 +21,7 @@ router.get('/login', (req, res) => {
 });
 
 router.post('/login', (req, res) => {
-    console.log('================');
-    console.log('Login Route');
-  
     console.log(req.body);
-    // Find the user by email
     db.User.findOne({email: req.body.email}, (err, foundUser) => {
       if (err) {
         console.log(err);
@@ -35,7 +31,6 @@ router.post('/login', (req, res) => {
         return res.render('users/login');
       }
   
-      // Verify the submitted password matches the foundUser.password
       if (foundUser.password === req.body.password) {
         return res.redirect(`/users/${foundUser._id}`);
       }
