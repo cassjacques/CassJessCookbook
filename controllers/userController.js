@@ -40,7 +40,7 @@ router.post('/login', (req, res) => {
 });
 
 router.get('/:id', (req, res) => {
-    // console.log(`User id=${req.params.id}`);
+  
 
     db.User.findById(req.params.id)
         .populate('recipes')

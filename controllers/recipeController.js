@@ -36,7 +36,7 @@ router.get('/:id/edit', (req, res) => {
     });
 });
 
-// PUT updated (EDIT) recipe by ID
+
 router.put('/:id', (req, res) => {
     const recipeId = req.params.id;
 
