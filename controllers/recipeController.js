@@ -38,8 +38,10 @@ router.get('/:id/edit', (req, res) => {
 
 // PUT updated (EDIT) recipe by ID
 router.put('/:id', (req, res) => {
+    const recipeId = req.params.id;
+
     db.Recipe.findByIdAndUpdate(
-        req.params.id,
+        recipeId,
         req.body,
         {new: true},
         (err, updatedRecipe) => {
@@ -47,7 +49,7 @@ router.put('/:id', (req, res) => {
                 console.log(err);
                 return res.send(err);
             }
-            res.redirect('/recipes/:id');
+            res.redirect(`/recipes/${recipeId}`);
         }
     )
 });
