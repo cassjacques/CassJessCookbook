@@ -9,7 +9,7 @@
     <%- include('../partials/profileHeader') %>
     <main>
 
-        <h1>Add New Recipe</h1>
+        <h2>Add New Recipe</h1>
 
         <form action='/users/<%= userId %>/recipes' method='POST'>
 
@@ -37,7 +37,8 @@
             <button type='submit'>Add Recipe</button>
 
         </form>
-        <br />
+        <br>
+        <br>
         <a href="/users/<%= userId %>">Go Back</a>
     </main>
 </body>
