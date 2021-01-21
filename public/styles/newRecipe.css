@@ -1,0 +1,23 @@
+body {
+    color: #523637;
+    background: #f2b9cc;
+    text-align: center;
+}
+
+.button {
+    background: #bb8918;
+    margin: 5px;
+    color: #e1dc6b;
+}
+
+div {
+    color: #523637; 
+}
+
+h2, header { 
+    -webkit-text-stroke: 1px #e1dc6b;
+}
+
+header {
+    border: 5px dotted #523637;
+}

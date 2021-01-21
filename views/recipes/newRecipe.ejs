@@ -3,43 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/newrecipe.css">
+    <script src="/scripts/scripts.js" defer></script>
     <title>Add New Recipe</title>
-</head>
+</head> 
 <body>
     <%- include('../partials/profileHeader') %>
     <main>
-
+        
         <h2>Add New Recipe</h2>
 
         <form action='/users/<%= userId %>/recipes' method='POST'>
 
             <div>
-                <label for='recipeTitle'>Title</label>
+                <label class="label" for='recipeTitle'>Title</label>
                 <input type='text' id='recipeTitle' name='recipeTitle' required>
             </div>
 
             <div>
-                <label for='ingredients'>Ingredients</label>
+                <label class="label" for='ingredients'>Ingredients</label>
                 <input type='text' id='ingredients' name='ingredients'>
             </div>
 
             <div>
-                <label for='instructions'>Instructions</label>
-               
+                <label class="label" for='instructions'>Instructions</label>
                 <input type='text' id='instructions' name='instructions'>
             </div>
         
             <div>
-                <label for='recipeType'>Type</label>
+                <label class="label" for='recipeType'>Type</label>
                 <input type='text' id='recipeType' name='recipeType'>
             </div>
 
             <button type='submit'>Add Recipe</button>
 
         </form>
-        <br>
-        <br>
-        <a href="/users/<%= userId %>">Go Back</a>
+        
     </main>
 </body>
 </html>

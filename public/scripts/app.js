@@ -1,1 +1,1 @@
-console.log('hello');
+console.log('Quarantine Cookbook Scripts');

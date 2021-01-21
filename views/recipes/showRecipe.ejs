@@ -1,32 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/showRecipe.css">
+    <script src="/scripts/scripts.js" defer></script>
     <title>Show Page For <%= recipeData.recipeTitle %></title>
 </head>
-<body>
-    <%- include('../partials/recipeHeader') %>
-    
+
+<body> 
+        <%- include('../partials/recipeHeader') %>
+   
+
+    <h2><%= recipeData.user.userName %>'s Recipe for:</h2>
+
     <main>
         <section>
-            <h3><%= recipeData.recipeTitle %></h3>
-            <p><%= recipeData.ingredients %></p>
-            <p><%= recipeData.instructions %></p>
-            <p><%= recipeData.recipeType %></p>
+            <h1><%= recipeData.recipeTitle %></h1>
+            <p><span class="recipeInput">Ingredients:</span> <%= recipeData.ingredients %></p>
+            <p><span class="recipeInput">Instructions:</span> <%= recipeData.instructions %></p>
+            <p><span class="recipeInput">Recipe Type:</span> <%= recipeData.recipeType %></p>
 
             <form action='/recipes/<%= recipeData._id %>?_method=DELETE' method='POST'>
-                <button type="submit">Delete</button>
+                <button class='button' type="submit">Delete</button>
             </form>
 
             <a href='/recipes/<%= recipeData._id %>/edit'>
-                <button>Edit</button>
+                <button class='button'>Edit</button>
             </a>
 
         </section>
-        <br>
-        <a href="/users/<%= recipeData.user._id %>">Go Back</a>
+
+        <a href="/users/<%= recipeData.user._id %>"><button class='button'>Go Back</button></a>
     </main>
 
 </body>
+
 </html>

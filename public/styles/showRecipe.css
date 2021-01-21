@@ -1,0 +1,23 @@
+body {
+    color:  #f2b9cc;
+    background: #bb8918;
+    text-align: center;
+}
+ 
+.button {
+    background: #a1ae25;
+    margin: 5px;
+    color: #f2b9cc;
+}
+
+.recipeInput, p {
+    color: #523637; 
+}
+
+h2, header { 
+    -webkit-text-stroke: 1px #523637;
+}
+
+header {
+    border: 5px dotted #f2b9cc;
+}
