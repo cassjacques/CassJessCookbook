@@ -4,15 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile Page</title>
+    <title>Let's get cookin', <%= user.userName %> </title>
 </head>
-
 <body>
-
+    <%- include('../partials/profileHeader') %>
 
     <main>
 
-        <h1>Welcome <%= user.userName %></h1>
+        <h2>Welcome <%= user.userName %></h1>
         <a href="/users/<%= user._id %>/recipes/new">
             <h4>Add New Recipe</h4>
         </a>

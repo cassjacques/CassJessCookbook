@@ -51,7 +51,8 @@ router.get('/:id', (req, res) => {
            
 
             const context = {
-                user: foundUser
+                user: foundUser,
+                userId: req.params.id,
             };
             res.render('users/profile', context);
         });
@@ -59,9 +60,9 @@ router.get('/:id', (req, res) => {
 
 router.get('/:id/recipes/new', (req, res) => {
     const context = {
-        userId: req.params.id
+        userId: req.params.id,
     }
-
+    console.log(context);
     res.render('users/newRecipe', context);
 });
 

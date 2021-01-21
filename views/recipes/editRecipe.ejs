@@ -6,8 +6,11 @@
     <title>Edit Recipe</title>
 </head>
 <body>
+    <%- include('../partials/recipeHeader') %>
+    <main>
 
-    <form action='/recipes/<%= recipeData._id %>?_method=PUT' method='POST'>
+    <section>
+       <form action='/recipes/<%= recipeData._id %>?_method=PUT' method='POST'>
 
         <div>
             <label for='recipeTitle'>Title</label>
@@ -32,10 +35,13 @@
 
         <button type='submit'>Update</button>
 
-    </form>
-    
+        </form>
+    </section>
     <br>
-    <a href="/users/<%= recipeData.user._id %>">Go Back</a>
+    <a href="/users/<%= recipeData.user._id %>">Go Back</a> 
+    
+
+    </main>
 
 </body>
 </html>
