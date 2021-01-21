@@ -11,23 +11,23 @@
 
         <div>
             <label for='recipeTitle'>Title</label>
-            <input type='text' id='recipeTitle' name='recipeTitle' required>
+            <input type='text' id='recipeTitle' name='recipeTitle' value='<%= recipeData.recipeTitle %>' required>
         </div>
 
         <div>
             <label for='ingredients'>Ingredients</label>
-            <input type='text' id='ingredients' name='ingredients'>
+            <input type='text' id='ingredients' name='ingredients' value='<%= recipeData.ingredients %>'>
         </div>
 
         <div>
             <label for='instructions'>Instructions</label>
            
-            <input type='text' id='instructions' name='instructions'>
+            <input type='text' id='instructions' name='instructions' value='<%= recipeData.instructions %>'>
         </div>
     
         <div>
             <label for='recipeType'>Type</label>
-            <input type='text' id='recipeType' name='recipeType'>
+            <input type='text' id='recipeType' name='recipeType' value='<%= recipeData.recipeType %>'>
         </div>
 
         <button type='submit'>Update</button>
