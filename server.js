@@ -13,13 +13,13 @@ app.use(methodOverride('_method'));
 
 
 app.get('/', (req, res) => {
-    const context={
-        meta: {
-            title: 'Let\'s get cookin!'
-        }
-    };
-
-    res.render('index', context);
+    // const context = {
+    //     meta: {
+    //         title: 'Let\'s get cookin!'
+    //     }
+    // };
+    // res.render('index', context);
+    res.redirect('/users/login');
 });
 
 app.use('/recipes', recipeController);
