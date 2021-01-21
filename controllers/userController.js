@@ -40,7 +40,7 @@ router.post('/login', (req, res) => {
 });
 
 router.get('/:id', (req, res) => {
-    // console.log(`User id=${req.params.id}`);
+  
 
     db.User.findById(req.params.id)
         .populate('recipes')
@@ -68,7 +68,15 @@ router.get('/:id/recipes/new', (req, res) => {
 
 router.post('/:userId/recipes', (req, res) => {
 
-    db.Recipe.create(req.body, (err, newRecipe) => {
+    const context = {
+        recipeTitle: req.body.recipeTitle,
+        ingredients: req.body.ingredients,
+        instructions: req.body.instructions,
+        recipeType: req.body.recipeType,
+        user: req.params.userId,
+    }
+    console.log(req.params.userId);
+    db.Recipe.create(context, (err, newRecipe) => {
         if (err) {
             console.log(err);
         }
@@ -77,7 +85,7 @@ router.post('/:userId/recipes', (req, res) => {
             if (err) {
                 console.log(err);
             }
-
+            
             foundUser.recipes.push(newRecipe
             );
 
