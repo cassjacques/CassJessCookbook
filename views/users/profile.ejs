@@ -15,20 +15,38 @@
 
     <main>
 
-        <h2>Welcome <%= user.userName %>!</h2>
-        <a href="/users/<%= user._id %>/recipes/new">
-            <h4>Add New Recipe</h4>
-        </a>
+        <div class="profile-main">
 
-        <h4>Recipes:</h4>
-        <ul>
-            <% user.recipes.forEach((recipe) => { %>
-            <li>
+            <div class="profile-recipes">
+
+                <div class="profile-text">
+
+                <h2>Welcome <%= user.userName %>!</h2>
+                <a href="/users/<%= user._id %>/recipes/new">
+                <h4>Add New Recipe</h4>
+                </a>    
+
+                </div>
+
+                <div class="recipes-main">
+
+                <h4>Recipes:</h4>
+                <ul>
+                <% user.recipes.forEach((recipe) => { %>
+                <li class="recipe-box">
                 <%= recipe.recipeTitle %>
-                <a href="/recipes/<%= recipe._id %>"><button>View</button></a>
-            </li>
-            <% }); %>
-        </ul>
+                <a href="/recipes/<%= recipe._id %>"><button class="show-recipe-button">View</button></a>
+                </li>
+                <% }); %>
+                </ul>     
+
+                </div>
+
+            </div>
+
+        </div>
+
+        
 
     </main>
 
