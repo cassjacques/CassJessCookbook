@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/main.css">
     <script src="/scripts/scripts.js" defer></script>
-    <title>New User</title>
+    <title>New User - Cass' and Jess' Quarantine Cookbook!</title>
 </head>
 <body>
     <%- include('../partials/loginHeader') %>
@@ -15,22 +15,26 @@
         <form action="/users" method="POST">
 
             <div>
-                <label for="userName">Username</label>
+                <label for="userName">Username:</label>
                 <input type="text" id="userName" name="userName" required>
             </div>
 
             <div>
-                <label for="email">Email</label>
+                <label for="email">Email:</label>
                 <input type="email" id="email" name="email">
             </div>
 
             <div>
-                <label for="password">Password</label>
+                <label for="password">Password:</label>
                 <input type="password" id="password" name="password" minlength="5">
             </div>
 
             <button type="submit">Join Us!</button>
         </form>
+        <p>
+            Already a user? Go back to <a href="/users/login">login</a>.
+        </p>
+
     </main>
 
     

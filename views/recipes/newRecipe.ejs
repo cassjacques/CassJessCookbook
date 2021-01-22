@@ -37,7 +37,13 @@
         
             <div>
                 <label for='recipeType'>Recipe Type:</label>
-                <input type='text' id='recipeType' name='recipeType'>
+                <input type='text' id='recipeType' name='recipeType' list="recipe-types">
+
+                <datalist id="recipe-types">
+                    <option value="Meat">
+                    <option value="Vegetarian">
+                    <option value="Dessert">
+                </datalist>
             </div>
 
             <button type='submit' class='submit-recipe'>Add Recipe</button>
