@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
     <script src="/scripts/scripts.js" defer></script>
     <title>Let's get cookin', <%= user.userName %> </title>
 </head>
@@ -13,7 +15,7 @@
 
     <main>
 
-        <h2>Welcome <%= user.userName %></h1>
+        <h2>Welcome <%= user.userName %>!</h2>
         <a href="/users/<%= user._id %>/recipes/new">
             <h4>Add New Recipe</h4>
         </a>
