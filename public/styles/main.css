@@ -8,7 +8,29 @@
 
 body {
     list-style-type: none;
+    font-family: 'Patrick Hand', cursive;
 }
+
+h2 {
+    font-size: 37px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+h4 {
+    font-size: 26px;
+}
+
+label, ul {
+    font-size: 20px;
+}
+
+p {
+    font-size: 1.3em;
+}
+
 
 /* Header / Title Area */
 
@@ -23,16 +45,20 @@ body {
 }
 
 .main-title {
-    padding-top: 3vh;
+    padding-top: 4vh;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 3em;
 }
 
 .title-img {
     height: 8em;
+    padding-top: 1em;
 }
 
 .profile-nav {
-    margin-top: 1.5em;
+    margin-bottom: 1vh;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    font-size: 22px;
 }
