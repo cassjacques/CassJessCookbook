@@ -11,31 +11,19 @@ body {
     font-family: 'Patrick Hand', cursive;
 }
 
-h2 {
-    font-size: 37px;
+a {
+    text-decoration: none;
+    color: var(--drkbrown);
 }
 
-h3 {
-    font-size: 30px;
+a:hover {
+    color: var(--lgtgreen)
 }
-
-h4 {
-    font-size: 26px;
-}
-
-label, ul {
-    font-size: 20px;
-}
-
-p {
-    font-size: 1.3em;
-}
-
 
 /* Header / Title Area */
 
 .profile-header {
-    margin-top: 5em;
+    margin-top: 6vh;
 }
 
 #title {
@@ -47,18 +35,58 @@ p {
 .main-title {
     padding-top: 4vh;
     font-family: 'Patrick Hand', cursive;
-    font-size: 3em;
+    font-size: 4.5vw;
 }
 
 .title-img {
-    height: 8em;
+    width: 10vw;
     padding-top: 1em;
 }
 
 .profile-nav {
-    margin-bottom: 1vh;
+    margin-bottom: 1.5vh;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    font-size: 22px;
+    font-size: 2vw;
+}
+
+/* Font Size Stylings */
+
+h2 {
+    font-size: 3.3vw;
+}
+
+h3, h4 {
+    font-size: 2.5vw;
+}
+
+label, ul {
+    font-size: 2vw;
+}
+
+p {
+    font-size: 1.8vw;
+}
+
+/* Main Login/Signup Area Styling */
+
+.login-main {
+    display: grid;
+    place-items: center;
+}
+
+.login-small {
+    display: grid;
+    place-items: center;
+    margin: 10px;
+    background-color: var(--drkgreen);
+    width: 40vw;
+    border: 5px solid var(--pink);
+    border-radius: 10px;
+    color: var(--drkbrown);
+}
+
+.login-button {
+    margin: 1.2vw 0 0 7.5vw;
 }

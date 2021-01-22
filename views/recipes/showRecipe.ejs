@@ -20,9 +20,9 @@
     <main>
         <section>
             <h3><%= recipeData.recipeTitle %></h3>
-            <p><span class="recipeInput">Ingredients:</span> <%= recipeData.ingredients %></p>
-            <p><span class="recipeInput">Instructions:</span> <%= recipeData.instructions %></p>
-            <p><span class="recipeInput">Recipe Type:</span> <%= recipeData.recipeType %></p>
+            <p><strong>Ingredients:</strong> <%= recipeData.ingredients %></p>
+            <p><strong>Instructions:</strong> <%= recipeData.instructions %></p>
+            <p><strong>Recipe Type:</strong> <%= recipeData.recipeType %></p>
 
             <form action='/recipes/<%= recipeData._id %>?_method=DELETE' method='POST'>
                 <button class='button' type="submit">Delete</button>
