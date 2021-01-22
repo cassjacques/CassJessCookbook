@@ -1,9 +1,16 @@
+<link rel="stylesheet" href="/styles/main.css">
+
 <header class="profile-header">
+
+    <div id="title">
+        <h1 class="main-title">Cass' & Jess' Quarantine Cookbook!</h1>
+        <img src="/img/cookbook.gif" alt="A cookbook." class="title-img">
+    </div>
+
     <nav class="profile-nav">
-        <h1>Cass' & Jess' Quarantine Cookbook</h1>
-
-
-                <a href="/users/<%= recipeData.user._id %>">Main Recipes</a>
-    
+        
+            <a class="profile-link" href="/users/<%= recipeData.user._id %>">Main Recipes</a>
+            <a class="logout-link" href="/users/login">Logout</a>
     </nav>
+
 </header>
