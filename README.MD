@@ -2,7 +2,7 @@ Cass and Jess’ Quarantine Cookbook
 
 ## Scope:
 
-To build an application where users can store their favorite recipes and sort them by type of meal, in addition to editing and deleting stored recipes. 
+To build an application where users can store their favorite recipes, in addition to editing and deleting stored recipes. 
 
 ## User story:
 
@@ -10,36 +10,46 @@ Users will be met with a landing page prompting for USERNAME and PASSWORD login 
 
 New users who need to create an account will be directed to a signup page prompting for a USERNAME, EMAIL, and PASSWORD fields to create an account. Once an account has been created, the user will be redirected to the landing page to log in.
 
-The user will then be directed to a profile page where they can add a recipe, add a sorting type, and a dropdown menu with available sorting types and a button for type selection. Vegetarian and meat options are the two default sorting types, but users have the ability to add additional sorting types on the profile page. Users can also log out on this page. 
+The user will then be directed to a profile page where they can add a recipe, and view all saved recipes. Users can also log out on this page. 
 
-Once the user selects a sorting type, the confirmation button will direct the user to a page displaying all of the recipes assigned to that type. Clicking on a recipe will redirect the user to a page showing information for the saved recipe, as well as buttons to edit or delete the individual recipe. 
+Clicking on a recipe will redirect the user to a page showing information for the saved recipe, as well as buttons to edit or delete the individual recipe. 
 
 ## Milestones:
 
 https://trello.com/b/miWL3jVt/recipe-application 
 
+<ul>
 Sprint 1 - 
-Users can see a basic page with a static header and footer.
-Users can see a landing page.
-Users can log-in or sign-up. 
-Users can see their profile page.
+<li>Users can see a basic page with a static header and footer.</li>
+<li>Users can see a landing page.</li>
+<li>Users can log-in or sign-up.</li>
+<li>Users can see their profile page.</li>
+</ul>
 
+<ul>
 Sprint 2 -
-Users can add a recipe and add a sorting type.
-Users can select a sorting type.
-Users can see all available recipes page. 
-Users can select individual recipes. 
+<li>Users can add a recipe and add a sorting type.</li>
+<li>Users can select a sorting type.</li>
+<li>Users can see all available recipes page. </li>
+<li>Users can select individual recipes. </li>
+</ul>
 
+<ul>
 Sprint 3 -
-Users can see individual recipes.
+<li>Users can see individual recipes.</li>
 Within the recipe page:
-Users can delete the recipe.
-Users can edit the recipe.
+<li>Users can delete the recipe.</li>
+<li>Users can edit the recipe.</li>
+</ul>
 
- Sprint 4 - 
-Users can see dynamically styled views on pages.
-Stretch goal: add recipe difficulty level.
-Stretch goal: sort recipes by type && difficulty.
+<ul>
+Sprint 4 - 
+<li>Users can see styled views on pages.</li>
+<li>Stretch goal: Users can add and select a sorting type, such as 'vegetarian' or 'meat'.</li>
+<li>Stretch goal: add recipe difficulty level.</li>
+<li>Stretch goal: sort recipes by type && difficulty.</li>
+</ul>
+
 
 ## Wireframe/ERD:
 
@@ -50,11 +60,12 @@ Stretch goal: sort recipes by type && difficulty.
 ![image_2021-01-15_12-55-55](https://media.git.generalassemb.ly/user/32534/files/743e7480-5737-11eb-97f9-4f81c3b492d5)
 
 ## Technologies Used:
-
-HTML
-CSS
-Node.js
-Express
-EJS
-MongoDB
-Mongoose
+<ul>
+<li>HTML</li>
+<li>CSS</li>
+<li>Node.js</li>
+<li>Express</li>
+<li>EJS</li>
+<li>MongoDB</li>
+<li>Mongoose</li>
+</ul>
