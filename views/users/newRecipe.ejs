@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/newRecipe.css">
     <script src="/scripts/scripts.js" defer></script>
     <title>Add New Recipe</title>
 </head>
@@ -39,11 +39,12 @@
                 <input type='text' id='recipeType' name='recipeType'>
             </div>
 
-            <button type='submit' class='submit-recipe'>Add Recipe</button>
+            <button class="button" type='submit'>Add Recipe</button>
+          <button type='submit' class='submit-recipe'>Add Recipe</button>
 
         </form>
 
-        <a href="/users/<%= userId %>">Go Back</a>
+        <a href="/users/<%= userId %>"><button class="button">Go Back</button></a>
     </main>
 </body>
 </html>
