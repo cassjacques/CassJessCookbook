@@ -22,3 +22,23 @@ h2, header{
 header {
     border: 5px dotted #bb8918;
 }
+
+/* Add/Edit recipe area */
+
+textarea {
+    padding: 10px;
+    line-height: 1.5;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+.submit-recipe {
+    margin-top: 10px;
+}
