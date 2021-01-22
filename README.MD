@@ -69,3 +69,41 @@ Sprint 4 -
 <li>MongoDB</li>
 <li>Mongoose</li>
 </ul>
+
+## Code Snips:
+
+```
+router.post('/:userId/recipes', (req, res) => {
+
+    const context = {
+        recipeTitle: req.body.recipeTitle,
+        ingredients: req.body.ingredients,
+        instructions: req.body.instructions,
+        recipeType: req.body.recipeType,
+        user: req.params.userId,
+    }
+    console.log(req.params.userId);
+    db.Recipe.create(context, (err, newRecipe) => {
+        if (err) {
+            console.log(err);
+        }
+
+        db.User.findById(req.params.userId, (err, foundUser) => {
+            if (err) {
+                console.log(err);
+            }
+            
+            foundUser.recipes.push(newRecipe
+            );
+
+            foundUser.save((err, savedUser) => {
+                if (err) {
+                    console.log(err);
+                }
+
+                res.redirect(`/users/${savedUser._id}`);
+            });
+        });
+    });
+}); 
+```
