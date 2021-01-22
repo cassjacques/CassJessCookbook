@@ -1,0 +1,34 @@
+:root {
+    --drkgreen: #a1ae25;
+    --lgtgreen: #e1dc6b;
+    --copper: #bb8918;
+    --drkbrown: #523637;
+    --pink: #f2b9cc;
+}
+
+body {
+    background-color: var(--lgtgreen);
+}
+
+
+/* Recipe View Area */
+
+.recipeInput {
+    font-weight: bold;
+}
+
+/* Add/Edit recipe area */
+
+textarea {
+    padding: 10px;
+    line-height: 1.5;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+.submit-recipe {
+    margin: 15px 0 15px 0;
+}
