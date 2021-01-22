@@ -59,6 +59,7 @@ h2 {
 
 h3, h4 {
     font-size: 2.5vw;
+    margin: 0;
 }
 
 label, ul {
@@ -89,4 +90,40 @@ p {
 
 .login-button {
     margin: 1.2vw 0 0 7.5vw;
+    color: var(--drkbrown);
+    background-color: var(--lgtgreen);
+}
+
+/* Profile Area Styling */
+
+.profile-main {
+    color: var(--drkbrown);
+    display: grid;
+    place-items: center;
+}
+
+.profile-recipes {
+    width: 60vw;
+    background-color: var(--pink);
+    padding-left: 10px;
+    border: 5px solid var(--copper);
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+.recipes-main {
+    display: grid;
+    place-items: center;
+    background-color: var(--lgtgreen);
+    width: 35vw;
+    margin: 1vw 12vw 2vw 13vw;
+    border: 4px solid var(--drkgreen);
+    border-radius: 10px;
+}
+
+.show-recipe-button {
+    background: var(--drkgreen);
+    margin-left: 10px;
+    color: var(--drkbrown);
 }
