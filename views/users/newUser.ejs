@@ -12,9 +12,14 @@
 <body>
     <%- include('../partials/loginHeader') %>
     <main>
-        <h2>Make a New Account</h2>
 
-        <form action="/users" method="POST">
+        <div class="login-main">
+
+            <div class="login-small">
+ 
+            <h2>Make a New Account</h2>
+
+            <form action="/users" method="POST">
 
             <div>
                 <label for="userName">Username:</label>
@@ -31,11 +36,17 @@
                 <input type="password" id="password" name="password" minlength="5">
             </div>
 
-            <button type="submit">Join Us!</button>
-        </form>
-        <p>
+            <button type="submit" class="login-button">Join Us!</button>
+            </form>
+            <p>
             Already a user? Go back to <a href="/users/login">login</a>.
-        </p>
+            </p>   
+
+            </div>     
+
+        </div>
+
+
 
     </main>
 
