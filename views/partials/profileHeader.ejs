@@ -1,22 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <header class="profile-header">
-        <nav class="profile-nav">
-            <h1>Cass' & Jess' Quarantine Cookbook</h1>
-    
-            <ul>
-            
-                    <a href="/users/<%= userId %>">Main Recipes</a>
-             
-            </ul>
-        </nav>
-    </header>
-    
-</body>
-</html>
+<link rel="stylesheet" href="/styles/main.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+
+
+<header class="profile-header">
+
+    <div id="title">
+        <h1 class="main-title">Cass' & Jess' Quarantine Cookbook!</h1>
+        <img src="/img/cookbook.gif" alt="A cookbook." class="title-img">
+    </div>
+
+    <nav class="profile-nav">
+            <a class="profile-link" href="/users/<%= userId %>">Main Recipes</a>
+            <a class="logout-link" href="/users/login">Logout</a>
+    </nav>
+
+</header>

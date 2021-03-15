@@ -49,7 +49,6 @@ router.get('/:id', (req, res) => {
                 console.log(err);
             };
            
-
             const context = {
                 user: foundUser,
                 userId: req.params.id,

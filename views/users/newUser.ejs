@@ -4,33 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
     <script src="/scripts/scripts.js" defer></script>
-    <title>New User</title>
+    <title>New User - Cass' and Jess' Quarantine Cookbook!</title>
 </head>
 <body>
     <%- include('../partials/loginHeader') %>
     <main>
-        <h2>Make a New Account</h2>
 
-        <form action="/users" method="POST">
+        <div class="login-main">
+
+            <div class="login-small">
+ 
+            <h2>Make a New Account</h2>
+
+            <form action="/users" method="POST">
 
             <div>
-                <label for="userName">Username</label>
+                <label for="userName">Username:</label>
                 <input type="text" id="userName" name="userName" required>
             </div>
 
             <div>
-                <label for="email">Email</label>
+                <label for="email">Email:</label>
                 <input type="email" id="email" name="email">
             </div>
 
             <div>
-                <label for="password">Password</label>
+                <label for="password">Password:</label>
                 <input type="password" id="password" name="password" minlength="5">
             </div>
 
-            <button type="submit">Join Us!</button>
-        </form>
+            <button type="submit" class="login-button">Join Us!</button>
+            </form>
+            <p>
+            Already a user? Go back to <a href="/users/login">login</a>.
+            </p>   
+
+            </div>     
+
+        </div>
+
+
+
     </main>
 
     

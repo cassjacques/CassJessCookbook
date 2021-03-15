@@ -5,33 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/main.css">
     <script src="/scripts/scripts.js" defer></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
     <title>Login - Cass' and Jess' Quantine Cookbook</title>
 </head>
 <body>
     <%- include('../partials/loginHeader') %>
     <main>
 
-        <h2>Log on in!</h2>
+        <div class="login-main">
 
-        <form action="/users/login" method="POST">
+            <div class="login-small">
+
+            <h2>Log on in!</h2>
+
+            <form action="/users/login" method="POST">
         
-        <div>
-            <label for="email">Email</label>
+            <div>
+            <label for="email">Email:</label>
             <input type="email" id="email" name="email">
-        </div>
+            </div>
         
-        <div>
-            <label for="password">Password</label>
+            <div>
+            <label for="password">Password:</label>
             <input type="password" id="password" name="password" minlength="5">
+            </div>
+
+            <button type="submit" class="login-button">Login</button>
+
+            </form>
+
+            <div class="signup">
+            <p>
+              Are you new to Quantine Cookbook?
+            <a href="/users/newUser">Signup!</a>  
+            </p>
+            </div>
+
+            </div>
+
+            
+
         </div>
 
-        <button type="submit">Login</button>
-
-        </form>
-        <div class="signup">
-            Are you a new Quantine Cookbook user?
-            <a href="/users/newUser">Signup!</a>
-        </div>
+        
         
     </main>
 

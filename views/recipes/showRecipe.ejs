@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/showRecipe.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">    
     <script src="/scripts/scripts.js" defer></script>
     <title>Show Page For <%= recipeData.recipeTitle %></title>
 </head>
@@ -17,10 +19,10 @@
 
     <main>
         <section>
-            <h1><%= recipeData.recipeTitle %></h1>
-            <p><span class="recipeInput">Ingredients:</span> <%= recipeData.ingredients %></p>
-            <p><span class="recipeInput">Instructions:</span> <%= recipeData.instructions %></p>
-            <p><span class="recipeInput">Recipe Type:</span> <%= recipeData.recipeType %></p>
+            <h3><%= recipeData.recipeTitle %></h3>
+            <p><strong>Ingredients:</strong> <%= recipeData.ingredients %></p>
+            <p><strong>Instructions:</strong> <%= recipeData.instructions %></p>
+            <p><strong>Recipe Type:</strong> <%= recipeData.recipeType %></p>
 
             <form action='/recipes/<%= recipeData._id %>?_method=DELETE' method='POST'>
                 <button class='button' type="submit">Delete</button>

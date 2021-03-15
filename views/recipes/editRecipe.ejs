@@ -1,55 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/editRecipe
-.css">
+    <link rel="stylesheet" href="/styles/editRecipe.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
     <script src="/scripts/scripts.js" defer></script>
     <title>Edit Recipe</title>
 </head>
-
 <body>
-    
-        <%- include('../partials/recipeHeader') %>
+    <%- include('../partials/recipeHeader') %>
     <main>
 
-        <section>
-            <h2>Edit <%= recipeData.recipeTitle %> Recipe Data</h2>
-            <form action='/recipes/<%= recipeData._id %>?_method=PUT' method='POST'>
+    <section>
+        <h2>Edit <%= recipeData.recipeTitle %> Recipe Data</h2>
+       <form action='/recipes/<%= recipeData._id %>?_method=PUT' method='POST'>
 
-                <div>
-                    <label for='recipeTitle'>Title</label>
-                    <input type='text' id='recipeTitle' name='recipeTitle' value='<%= recipeData.recipeTitle %>'
-                        required>
-                </div>
+        <div>
+            <label for='recipeTitle'>Title:</label>
+            <input type='text' id='recipeTitle' name='recipeTitle' value='<%= recipeData.recipeTitle %>' required>
+        </div>
 
-                <div>
-                    <label for='ingredients'>Ingredients</label>
-                    <input type='text' id='ingredients' name='ingredients' value='<%= recipeData.ingredients %>'>
-                </div>
+        <div>
+            <label for='ingredients'>Ingredients:</label>
+            <textarea id='ingredients' name='ingredients' rows='5' cols='30'><%= recipeData.ingredients %></textarea>
+        </div>
 
-                <div>
-                    <label for='instructions'>Instructions</label>
+        <div>
+            <label for='instructions'>Instructions:</label>
+            <textarea id='instructions'name='instructions'
+                rows="10" cols="30"><%=recipeData.instructions%></textarea>
+        </div>
+    
+        <div>
+            <label for='recipeType'>Type:</label>
+            <input type='text' id='recipeType' name='recipeType' value='<%= recipeData.recipeType %>'>
+        </div>
+        
 
-                    <input type='text' id='instructions' name='instructions' value='<%= recipeData.instructions %>'>
-                </div>
+        <button type='submit' class='submit-recipe'>Update</button>
 
-                <div>
-                    <label for='recipeType'>Type</label>
-                    <input type='text' id='recipeType' name='recipeType' value='<%= recipeData.recipeType %>'>
-                </div>
-
-                <button class='button' type='submit'>Update</button>
-
-            </form>
-        </section>
-        <a href="/users/<%= recipeData.user._id %>"><button class="button">Go Back</button></a>
-
+        </form>
+    </section>
+    <br>
+    <a href="/users/<%= recipeData.user._id %>">Go Back</a> 
+    
 
     </main>
 
 </body>
-
 </html>

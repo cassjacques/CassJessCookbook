@@ -13,7 +13,7 @@ router.get('/:id', (req, res) => {
         .exec((err, foundRecipe) => {
             if (err) {
                 console.log(err);
-                return res.send(err);
+                // return res.send(err);
             }
 
             const context = {
@@ -27,7 +27,7 @@ router.get('/:id/edit', (req, res) => {
     db.Recipe.findById(req.params.id, (err, foundRecipe) => {
         if (err) {
             console.log(err);
-            return res.send(err);
+            // return res.send(err);
         }
         const context = {
             recipeData: foundRecipe,
@@ -47,7 +47,7 @@ router.put('/:id', (req, res) => {
         (err, updatedRecipe) => {
             if (err) {
                 console.log(err);
-                return res.send(err);
+                // return res.send(err);
             }
             res.redirect(`/recipes/${recipeId}`);
         }
@@ -59,22 +59,19 @@ router.delete('/:id', (req, res) => {
     db.Recipe.findByIdAndDelete(recipeId, (err, deletedRecipe) => {
         if (err) {
             console.log(err);
-            return res.send(err);
+            // return res.send(err);
         };
-        console.log(recipeId);
         
         const userId = deletedRecipe.user;
 
-        console.log(userId);
         db.User.findByIdAndUpdate(
             deletedRecipe.user,
             { $pull: { recipes: deletedRecipe._id } },
             { new: true },
             (err, updatedUser) => {
-                console.log('updatedUser:', updatedUser);
+                // console.log('updatedUser:', updatedUser);
             },
         )
-        console.log(deletedRecipe);
         res.redirect(`/users/${userId}`);
     });
 });
